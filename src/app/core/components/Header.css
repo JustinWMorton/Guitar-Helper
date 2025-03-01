@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom utility classes */
+.text-link-color {
+  color: var(--link-color);
+}
+
+.header {
+  @apply w-full p-4 bg-background-color flex items-center text-text-color shadow-md;
+}
+
+.nav-container {
+  @apply container mx-auto flex items-center justify-between;
+}
+
+a {
+  @apply mr-4 text-link-color no-underline text-lg font-semibold;
+}
+
+a:visited,
+a:active {
+  @apply text-link-color no-underline;
+}
+
+.nav-menu {
+  @apply flex items-center justify-center space-x-4 mr-40;
+}
+
+.logo-link {
+  @apply flex items-center;
+}
+
+.logo-wrapper {
+  @apply flex items-center;
+}
+
+.logo {
+  @apply w-10 h-10 mr-2 text-link-color;
+}
+
+.logo-text {
+  @apply relative text-2xl font-bold;
+}
+
+/* Dark mode styles */
+[data-theme='dark'] .header {
+  @apply bg-background-color text-text-color;
+}
+
+[data-theme='dark'] a {
+  @apply text-link-color;
+}
+
+[data-theme='dark'] .logo {
+  @apply text-link-color;
+}

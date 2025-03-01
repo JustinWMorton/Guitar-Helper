@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define custom classes within a @layer directive */
+@layer utilities {
+  .bg-background-color-lm {
+    background-color: var(--background-color-lm);
+  }
+  .bg-background-color-dm {
+    background-color: var(--background-color-dm);
+  }
+  .bg-primary-color {
+    background-color: var(--primary-color);
+  }
+  .shadow-color {
+    box-shadow: 0 4px 8px var(--shadow-color);
+  }
+}
+
+.theme-toggle {
+  @apply w-14 h-6 bg-background-color rounded-full relative cursor-pointer flex items-center p-1 shadow-color overflow-hidden transition-colors duration-300 ease-in-out outline-none;
+}
+
+.toggle {
+  @apply w-full h-full relative flex items-center justify-between rounded-full transition-colors duration-300 ease-in-out;
+}
+
+.toggle.light {
+  @apply bg-background-color-lm;
+}
+
+.toggle.dark {
+  @apply bg-background-color-dm;
+}
+
+.circle {
+  @apply w-5 h-0 rounded-full bg-primary-color flex items-center justify-center text-base absolute transform -translate-y-1/2 transition-transform duration-300 ease-in-out outline-none;
+}
+
+.toggle.light .circle {
+  @apply translate-x-0;
+}
+
+.toggle.dark .circle {
+  @apply translate-x-7;
+}

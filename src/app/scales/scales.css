@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define custom classes within a @layer directive */
+@layer utilities {
+  .shadow-color {
+    box-shadow: 0 4px 8px var(--shadow-color);
+  }
+}
+
+.scales-page {
+  @apply flex flex-col items-center justify-center;
+}
+
+.content-wrapper {
+  @apply w-full p-4 flex flex-col items-center justify-center;
+}
+
+.fretboard-wrapper {
+  @apply w-full flex justify-center;
+}
+
+.menu-wrapper {
+  @apply flex flex-col items-center justify-center mb-4;
+}
+
+hr {
+  @apply w-80 my-4 border-fret-color;
+}
+
+h1 {
+  @apply text-4xl font-bold justify-center;
+}
+
+.select-wrapper {
+  @apply flex items-center justify-center space-x-9;
+}
+
+.dropdown {
+  @apply p-2 bg-background-color rounded-md shadow-color focus:outline-none focus:ring-2 focus:ring-text-color;
+}
+
+.dropdown-button {
+  @apply bg-background-color text-text-color p-2 rounded-md shadow-color cursor-pointer inline-flex items-center justify-between transition-colors;
+}
+
+.dropdown-button:hover {
+  @apply bg-background-color;
+}
+
+.dropdown-arrow {
+  @apply ml-2;
+}

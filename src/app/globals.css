@@ -3,19 +3,73 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background-color: var(--background-color-lm);
+  --dropdown-backgrond-color: var(--dropdown-background-color-lm);
+  --text-color: var(--text-color-lm);
+  --link-color: var(--link-color-lm);
+  --shadow-color: var(--shadow-color-lm);
+  --nut-color: var(--nut-color-lm);
+  --note-color: var(--note-color-lm);
+  --note-text-color: var(--note-text-color-lm);
+  --highlighted-note-color: var(--highlighted-note-color-lm);
+  --highlighted-note-text-color: var(--highlighted-note-text-color-lm);
+  --root-note-color: var(--root-note-color-lm);
+  --root-note-text-color: var(--root-note-text-color-lm);
+  --fret-color: var(--fret-color-lm);
+  --string-color: var(--string-color-lm);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+[data-theme='dark'] {
+  --background-color: var(--background-color-dm);
+  --dropdown-backgrond-color: var(--dropdown-background-color-dm);
+  --text-color: var(--text-color-dm);
+  --link-color: var(--link-color-dm);
+  --shadow-color: var(--shadow-color-dm);
+  --nut-color: var(--nut-color-dm);
+  --note-color: var(--note-color-dm);
+  --note-text-color: var(--note-text-color-dm);
+  --highlighted-note-color: var(--highlighted-note-color-dm);
+  --highlighted-note-text-color: var(--highlighted-note-text-color-dm);
+  --root-note-color: var(--root-note-color-dm);
+  --root-note-text-color: var(--root-note-text-color-dm);
+  --fret-color: var(--fret-color-dm);
+  --string-color: var(--string-color-dm);
+}
+
+:root {
+  --background-color-lm: #d6d3d1;
+  --dropdown-background-color-lm: #f5f5f4;
+  --text-color-lm: #252525;
+  --link-color-lm: #252525;
+  --shadow-color-lm: #00000033;
+  --nut-color-lm: #5d5d5d;
+  --note-color-lm: #0000003f;
+  --note-text-color-lm: #ffffff;
+  --highlighted-note-color-lm: #1e1e1e;
+  --highlighted-note-text-color-lm: #d6d3d1;
+  --root-note-color-lm: #90664d;
+  --root-note-text-color-lm: #d6d3d1;
+  --fret-color-lm: #1e1e1e;
+  --string-color-lm: #1e1e1e;
+
+  --background-color-dm: #1e1e1e;
+  --dropdown-background-color-dm: #292524;
+  --text-color-dm: #d6d3d1;
+  --link-color-dm: #d6d3d1;
+  --shadow-color-dm: #ffffff33;
+  --nut-color-dm: #4c5666;
+  --note-color-dm: #0000003f;
+  --note-text-color: #d6d3d1;
+  --highlighted-note-color-dm: #7289da;
+  --highlighted-note-text-color-dm: #d6d3d1;
+  --root-note-color-dm: #d6d3d1;
+  --root-note-text-color-dm: #1e1e1e;
+  --fret-color-dm: #99aab5;
+  --string-color-dm: #55799d;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: var(--text-color);
+  background-color: var(--background-color);
   font-family: Arial, Helvetica, sans-serif;
 }

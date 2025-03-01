@@ -1,0 +1,110 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.modalContent {
+  background-color: var(--background-color);
+  border-radius: 8px;
+  padding: 16px;
+  width: 385px;
+  height: 225px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  transform: scale(0.9);
+  transition: transform 0.3s ease-in-out;
+}
+
+.modalOverlay:hover .modalContent {
+  transform: scale(1);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.closeButton {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.modalTitle {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.modalBody {
+  position: relative;
+  top: 40px;
+  flex: 1;
+  max-height: 80px;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.rootNoteButton {
+  font-weight: bold;
+  background-color: var(--dropdown-background-color);
+  color: var(--text-color);
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.rootNoteButton:hover {
+  background-color: var(--dropdown-hover-background-color);
+}
+
+.selectedRootNote {
+  background-color: var(--highlighted-note-color);
+  color: var(--highlighted-note-text-color);
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.applyButton {
+  font-weight: bold;
+  position: relative;
+  top: 30px;
+  background-color: var(--blue-500);
+  color: var(--text-color);
+  padding: 16px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.applyButton:hover {
+  background-color: var(--highlighted-note-color);
+  color: var(--highlighted-note-text-color);
+}

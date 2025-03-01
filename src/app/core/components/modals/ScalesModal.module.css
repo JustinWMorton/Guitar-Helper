@@ -1,0 +1,109 @@
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.modalContent {
+  background-color: var(--background-color);
+  border-radius: 8px;
+  padding: 16px;
+  width: 1000px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transform: scale(0.9);
+  transition: transform 0.3s ease-in-out;
+}
+
+.modalOverlay:hover .modalContent {
+  transform: scale(1);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.modalTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.modalBody {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.scaleSection {
+  margin-bottom: 16px;
+}
+
+.scaleTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 8px;
+}
+
+.modesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.modeButton {
+  font-weight: bold;
+  background-color: var(--dropdown-background-color);
+  color: var(--text-color);
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.modeButton:hover {
+  background-color: var(--dropdown-hover-background-color);
+}
+
+.selectedMode {
+  background-color: var(--highlighted-note-color);
+  color: var(--highlighted-note-text-color);
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.applyButton {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.applyButton:hover {
+  background-color: var(--highlighted-note-color);
+  color: var(--highlighted-note-text-color);
+}
