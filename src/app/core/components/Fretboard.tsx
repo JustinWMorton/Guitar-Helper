@@ -15,30 +15,6 @@ const Fretboard: React.FC<FretboardProps> = ({ mode, rootNote }) => {
   const { viewMode } = useSettings();
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  // const findRootNoteFrets = (rootNote: string): number[] => {
-  //   const frets: number[] = [];
-  //   for (let stringIndex = 0; stringIndex < 6; stringIndex++) {
-  //     for (let fret = 0; fret < 18; fret++) {
-  //       if (formatNote(getNote(stringIndex, fret)) === rootNote) {
-  //         frets.push(fret);
-  //         if (frets.length === 2) return frets;
-  //       }
-  //     }
-  //   }
-  //   return frets;
-  // };  
-
-  // const isInPrimaryPosition = useCallback((fret: number) => {
-  //   const rootNoteFrets = findRootNoteFrets(rootNote);
-  //   const fretSpan = mode.positions[0].fretSpan;
-    
-  //   return rootNoteFrets.some(rootFret => {
-  //     const startFret = rootFret;
-  //     const endFret = startFret + fretSpan;
-  //     return fret >= startFret && fret < endFret;
-  //   });
-  // }, [mode, rootNote]);
-
   const findRootNoteFrets = (rootNote: string): number[] => {
     const frets: number[] = [];
     const checkMultiplePositions = ['E', 'F', 'G'].includes(rootNote);
@@ -180,7 +156,6 @@ const Fretboard: React.FC<FretboardProps> = ({ mode, rootNote }) => {
             ctx.fillStyle = setFillColorWithOpacity(noteColor, opacity);
           }
 
-          console.log(isPrimaryPosition, fret, note.name, ctx.fillStyle);
           ctx.strokeStyle = 'transparent'; 
           ctx.shadowBlur = 5; 
           ctx.shadowColor = shadowColor; 
