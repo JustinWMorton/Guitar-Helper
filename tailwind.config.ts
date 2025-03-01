@@ -4,6 +4,10 @@ export default {
   darkMode: ['class', '[data-theme="dark"]'],
   content: [
     "./src/app/core/components/**.{js,ts,jsx,tsx,mdx,html,css}",
+    "./src/app/core/components/modals/**.{js,ts,jsx,tsx,mdx,html,css}",
+    "./src/app/chords/**.{js,ts,jsx,tsx,mdx,html,css}",
+    "./src/app/scales/**.{js,ts,jsx,tsx,mdx,html,css}",
+    "./src/app/shared/**.{js,ts,jsx,tsx,mdx,html,css}",
     "./src/app/**.{js,ts,jsx,tsx,mdx,html,css}",
     "./src/app/**/**.{js,ts,jsx,tsx,mdx,html,css}",
   ],
