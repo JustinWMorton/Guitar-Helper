@@ -4,7 +4,6 @@ import type { NextPage } from 'next';
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import './globals.css';
-import '@components/Header.css';
 
 const Home: NextPage = () => {
   const router = useRouter();
