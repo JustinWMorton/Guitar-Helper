@@ -9,6 +9,7 @@ The following are some features I want to implement in the future.
 - Metronome on the scales page to help practice.
 - Home page the ties together the rest of the app.
 - Extra/custom themes.
+- Mobile support.
 
 ## Home Page
 ### Light Mode
